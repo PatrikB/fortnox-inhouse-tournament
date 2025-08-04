@@ -85,7 +85,7 @@
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Slutspel</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort gruppspelet är klart.</h2>
-`,i=[{firstname:"Patrik",surname:"Björn",nickname:"BJOERN",team:1,kills:0,deaths:0},{firstname:"Lukas",surname:"Karlsson",nickname:"Krak3N",team:1,kills:0,deaths:0},{firstname:"Emil",surname:"Carlsson",nickname:"wRoNg",team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Österberg",nickname:"Units",team:1,kills:0,deaths:0},{firstname:"Carl",surname:"Pagels",nickname:"Cuuurl",team:1,kills:0,deaths:0}],h=i.map((t,s)=>(++s,`<tr><td class="border p-4 text-left">${s}. ${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td></tr>`)),f=`
+`,i=[{firstname:"Patrik",surname:"Björn",nickname:"BJOERN",team:1,kills:0,deaths:0},{firstname:"Lukas",surname:"Karlsson",nickname:"Krak3N",team:1,kills:0,deaths:0},{firstname:"Emil",surname:"Carlsson",nickname:"wRoNg",team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Österberg",nickname:"Units",team:1,kills:0,deaths:0},{firstname:"Carl",surname:"Pagels",nickname:"Cuuurl",team:1,kills:0,deaths:0},{firstname:"Ludvig",surname:"Bengtsson",nickname:"Lolkana",team:1,kills:0,deaths:0}],h=i.map((t,s)=>(++s,`<tr><td class="border p-4 text-left">${s}. ${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td></tr>`)),f=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Deltagare</h1>
   
   <table class="w-full border-collapse border">
