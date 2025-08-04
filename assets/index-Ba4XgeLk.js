@@ -1,4 +1,4 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const a of e)if(a.type==="childList")for(const l of a.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&r(l)}).observe(document,{childList:!0,subtree:!0});function o(e){const a={};return e.integrity&&(a.integrity=e.integrity),e.referrerPolicy&&(a.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?a.credentials="include":e.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function r(e){if(e.ep)return;e.ep=!0;const a=o(e);fetch(e.href,a)}})();const m=`
+(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const a of e)if(a.type==="childList")for(const o of a.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&r(o)}).observe(document,{childList:!0,subtree:!0});function l(e){const a={};return e.integrity&&(a.integrity=e.integrity),e.referrerPolicy&&(a.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?a.credentials="include":e.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function r(e){if(e.ep)return;e.ep=!0;const a=l(e);fetch(e.href,a)}})();const m=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Hem</h1>
   
   <section class="mb-8">
@@ -85,7 +85,7 @@
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Slutspel</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort gruppspelet är klart.</h2>
-`,i=[{firstname:"Patrik",surname:"Björn",nickname:"BJOERN",team:1,kills:0,deaths:0}],h=i.map((t,s)=>(++s,`<tr><td class="border p-4 text-left">${s}. ${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td></tr>`)),f=`
+`,i=[{firstname:"Patrik",surname:"Björn",nickname:"BJOERN",team:1,kills:0,deaths:0},{firstname:"Lukas",surname:"Karlsson",nickname:"Krak3N",team:1,kills:0,deaths:0},{firstname:"Emil",surname:"Carlsson",nickname:"wRoNg",team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Österberg",nickname:"Units",team:1,kills:0,deaths:0},{firstname:"Carl",surname:"Pagels",nickname:"Cuuurl",team:1,kills:0,deaths:0}],h=i.map((t,s)=>(++s,`<tr><td class="border p-4 text-left">${s}. ${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td></tr>`)),f=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Deltagare</h1>
   
   <table class="w-full border-collapse border">
@@ -97,7 +97,7 @@
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Lag</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort lagen är lottade.</h2>
-`,d=[{team:1,name:"N/A",games:0,wins:0,losses:0}],b=t=>t===void 0?"":d.map(s=>{if(s.team===t)return s.name}).join(""),x=i.map((t,s)=>{let o=t.kills/t.deaths||0,r="";s===0?r="bg-yellow-200":s===1?r="bg-gray-200":s===2&&(r="bg-amber-100");let e=d.find(a=>a.team===t.team);return`
+`,d=[{team:1,name:"N/A",games:0,wins:0,losses:0}],b=t=>t===void 0?"":d.map(s=>{if(s.team===t)return s.name}).join(""),x=i.map((t,s)=>{let l=t.kills/t.deaths||0,r="";s===0?r="bg-yellow-200":s===1?r="bg-gray-200":s===2&&(r="bg-amber-100");let e=d.find(a=>a.team===t.team);return`
         <tr>
             <td class="border p-4 text-left ${r}">${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td>
             <td class="border p-4 text-left ${r}">${b(e?.team)}</td>
@@ -106,7 +106,7 @@
             <td class="border p-4 text-right ${r}">${e?.losses}</td>
             <td class="border p-4 text-right ${r}">${t.kills}</td>
             <td class="border p-4 text-right ${r}">${t.deaths}</td>
-            <td class="border p-4 text-right ${r}">${o.toFixed(2)}</td>
+            <td class="border p-4 text-right ${r}">${l.toFixed(2)}</td>
         </tr>
     `}),w=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Statistik</h1>
@@ -158,7 +158,7 @@
   <h2 class="text-2xl/7 font-bold sm:truncate sm:text-2xl sm:tracking-tight pb-3">Frågor?</h2>
   
   <p>Information kommer primärt hållas i <a href="https://discord.gg/edCNCUKhGt" target="_blank">fortnox-gameon discord</a>, så se till att alla lagmedlemmar sitter där.</p>
-`,k=[{path:"/",data:m},{path:"/groups",data:g},{path:"/playoffs",data:p},{path:"/participants",data:f},{path:"/teams",data:u},{path:"/stats",data:w},{path:"/rules",data:v}],n=()=>{const t=document.getElementById("root");if(!t)return;const s=k.find(r=>r.path==window.location.pathname||"/fortnox-inhouse-tournament"+r.path==window.location.pathname);if(!s)return;const o=s.data;t.style.opacity="0.0",setTimeout(()=>{t.innerHTML=o,t.style.opacity="1.0"},50)},c=()=>{document.querySelectorAll("nav a").forEach(t=>{t.href===window.location.href?(t.classList.add("bg-emerald-950"),t.classList.remove("bg-transparent")):(t.classList.remove("bg-emerald-950"),t.classList.add("bg-transparent"))})},y=t=>{if(!t)return;t.preventDefault();const s=t.target;s&&(history.pushState({},"newUrl",s.href),n(),c())},L=()=>{window.addEventListener("popstate",n),window.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("nav a").forEach(t=>{t.addEventListener("click",y)}),n(),c()})};L();const $=`
+`,k=[{path:"/",data:m},{path:"/groups",data:g},{path:"/playoffs",data:p},{path:"/participants",data:f},{path:"/teams",data:u},{path:"/stats",data:w},{path:"/rules",data:v}],n=()=>{const t=document.getElementById("root");if(!t)return;const s=k.find(r=>r.path==window.location.pathname||"/fortnox-inhouse-tournament"+r.path==window.location.pathname);if(!s)return;const l=s.data;t.style.opacity="0.0",setTimeout(()=>{t.innerHTML=l,t.style.opacity="1.0"},50)},c=()=>{document.querySelectorAll("nav a").forEach(t=>{t.href===window.location.href?(t.classList.add("bg-emerald-950"),t.classList.remove("bg-transparent")):(t.classList.remove("bg-emerald-950"),t.classList.add("bg-transparent"))})},y=t=>{if(!t)return;t.preventDefault();const s=t.target;s&&(history.pushState({},"newUrl",s.href),n(),c())},L=()=>{window.addEventListener("popstate",n),window.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("nav a").forEach(t=>{t.addEventListener("click",y)}),n(),c()})};L();const $=`
     <div class="md:flex flex-col md:flex-row md:min-h-screen sticky top-0 h-screen">
       <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-white bg-emerald-900 flex-shrink-0" x-data="{ open: false }">
         <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
