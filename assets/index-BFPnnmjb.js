@@ -85,7 +85,7 @@
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Slutspel</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort gruppspelet är klart.</h2>
-`,i=[{firstname:"Patrik",surname:"Björn",nickname:"BJOERN",team:1,kills:0,deaths:0},{firstname:"Lukas",surname:"Karlsson",nickname:"Krak3N",team:1,kills:0,deaths:0},{firstname:"Emil",surname:"Carlsson",nickname:"wRoNg",team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Österberg",nickname:"Units",team:1,kills:0,deaths:0},{firstname:"Carl",surname:"Pagels",nickname:"Cuuurl",team:1,kills:0,deaths:0},{firstname:"Ludvig",surname:"Bengtsson",nickname:"Lolkana",team:1,kills:0,deaths:0},{firstname:"Elliot",surname:"Gustafsson",nickname:"ottyhard",team:1,kills:0,deaths:0},{firstname:"Edvin",surname:"Ström",nickname:"Amp3d",team:1,kills:0,deaths:0},{firstname:"Gunnar",surname:"Henson",nickname:"atlas",team:1,kills:0,deaths:0}],p=i.map((t,s)=>(++s,`<tr><td class="border p-4 text-left">${s}. ${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td></tr>`)),f=`
+`,i=[{firstname:"Patrik",surname:"Björn",nickname:"BJOERN",team:1,kills:0,deaths:0},{firstname:"Lukas",surname:"Karlsson",nickname:"Krak3N",team:1,kills:0,deaths:0},{firstname:"Emil",surname:"Carlsson",nickname:"wRoNg",team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Österberg",nickname:"Units",team:1,kills:0,deaths:0},{firstname:"Carl",surname:"Pagels",nickname:"Cuuurl",team:1,kills:0,deaths:0},{firstname:"Ludvig",surname:"Bengtsson",nickname:"Lolkana",team:1,kills:0,deaths:0},{firstname:"Elliot",surname:"Gustafsson",nickname:"ottyhard",team:1,kills:0,deaths:0},{firstname:"Edvin",surname:"Ström",nickname:"Amp3d",team:1,kills:0,deaths:0},{firstname:"Gunnar",surname:"Henson",nickname:"atlas",team:1,kills:0,deaths:0},{firstname:"Pontus",surname:"Johansson",nickname:"shzss",team:1,kills:0,deaths:0}],p=i.map((t,s)=>(++s,`<tr><td class="border p-4 text-left">${s}. ${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td></tr>`)),u=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Deltagare</h1>
   
   <table class="w-full border-collapse border">
@@ -93,7 +93,7 @@
         ${p.join("")}
     </tbody>
   </table>
-`,u=`
+`,f=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Lag</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort lagen är lottade.</h2>
@@ -108,7 +108,7 @@
             <td class="border p-4 text-right ${a}">${t.deaths}</td>
             <td class="border p-4 text-right ${a}">${l.toFixed(2)}</td>
         </tr>
-    `}),w=`
+    `}),k=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Statistik</h1>
   
   <table class="w-full border-collapse border">
@@ -128,7 +128,7 @@
         ${x.join("")}
     </tbody>
   </table>
-`,k=`
+`,w=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Regler</h1>
   
   <p class="mb-8">Alla matcher spelas i bäst av 3 (BO3). Beroende på hur många lag som anmäler sig blir det slutspel alternativt möter de 2 bästa lagen poängmässigt varandra i en final.</p>
@@ -158,7 +158,7 @@
   <h2 class="text-2xl/7 font-bold sm:truncate sm:text-2xl sm:tracking-tight pb-3">Frågor?</h2>
   
   <p>Information kommer primärt hållas i <a href="https://discord.gg/edCNCUKhGt" target="_blank">fortnox-gameon discord</a>, så se till att alla lagmedlemmar sitter där.</p>
-`,v=[{path:"/",data:m},{path:"/groups",data:g},{path:"/playoffs",data:h},{path:"/participants",data:f},{path:"/teams",data:u},{path:"/stats",data:w},{path:"/rules",data:k}],n=()=>{const t=document.getElementById("root");if(!t)return;const s=v.find(a=>a.path==window.location.pathname||"/fortnox-inhouse-tournament"+a.path==window.location.pathname);if(!s)return;const l=s.data;t.style.opacity="0.0",setTimeout(()=>{t.innerHTML=l,t.style.opacity="1.0"},50)},c=()=>{document.querySelectorAll("nav a").forEach(t=>{t.href===window.location.href?(t.classList.add("bg-emerald-950"),t.classList.remove("bg-transparent")):(t.classList.remove("bg-emerald-950"),t.classList.add("bg-transparent"))})},y=t=>{if(!t)return;t.preventDefault();const s=t.target;s&&(history.pushState({},"newUrl",s.href),n(),c())},L=()=>{window.addEventListener("popstate",n),window.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("nav a").forEach(t=>{t.addEventListener("click",y)}),n(),c()})};L();const $=`
+`,v=[{path:"/",data:m},{path:"/groups",data:g},{path:"/playoffs",data:h},{path:"/participants",data:u},{path:"/teams",data:f},{path:"/stats",data:k},{path:"/rules",data:w}],n=()=>{const t=document.getElementById("root");if(!t)return;const s=v.find(a=>a.path==window.location.pathname||"/fortnox-inhouse-tournament"+a.path==window.location.pathname);if(!s)return;const l=s.data;t.style.opacity="0.0",setTimeout(()=>{t.innerHTML=l,t.style.opacity="1.0"},50)},c=()=>{document.querySelectorAll("nav a").forEach(t=>{t.href===window.location.href?(t.classList.add("bg-emerald-950"),t.classList.remove("bg-transparent")):(t.classList.remove("bg-emerald-950"),t.classList.add("bg-transparent"))})},y=t=>{if(!t)return;t.preventDefault();const s=t.target;s&&(history.pushState({},"newUrl",s.href),n(),c())},L=()=>{window.addEventListener("popstate",n),window.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("nav a").forEach(t=>{t.addEventListener("click",y)}),n(),c()})};L();const $=`
     <div class="md:flex flex-col md:flex-row md:min-h-screen sticky top-0 h-screen">
       <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-white bg-emerald-900 flex-shrink-0" x-data="{ open: false }">
         <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
