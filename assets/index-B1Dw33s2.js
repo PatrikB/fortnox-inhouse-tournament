@@ -1,4 +1,4 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&a(o)}).observe(document,{childList:!0,subtree:!0});function l(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerPolicy&&(r.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?r.credentials="include":e.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function a(e){if(e.ep)return;e.ep=!0;const r=l(e);fetch(e.href,r)}})();const m=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))r(s);new MutationObserver(s=>{for(const l of s)if(l.type==="childList")for(const o of l.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&r(o)}).observe(document,{childList:!0,subtree:!0});function e(s){const l={};return s.integrity&&(l.integrity=s.integrity),s.referrerPolicy&&(l.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?l.credentials="include":s.crossOrigin==="anonymous"?l.credentials="omit":l.credentials="same-origin",l}function r(s){if(s.ep)return;s.ep=!0;const l=e(s);fetch(s.href,l)}})();const h=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Hem</h1>
   
   <section class="mb-8">
@@ -77,38 +77,38 @@
       </table>
     </div>
   </div>
-`,g=`
+`,f=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Gruppspel</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort lagen är klara.</h2>
-`,h=`
+`,u=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Slutspel</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort gruppspelet är klart.</h2>
-`,i=[{firstname:"Patrik",surname:"Björn",nickname:"BJOERN",team:1,kills:0,deaths:0},{firstname:"Lukas",surname:"Karlsson",nickname:"Krak3N",team:1,kills:0,deaths:0},{firstname:"Emil",surname:"Carlsson",nickname:"wRoNg",team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Österberg",nickname:"Units",team:1,kills:0,deaths:0},{firstname:"Carl",surname:"Pagels",nickname:"Cuuurl",team:1,kills:0,deaths:0},{firstname:"Ludvig",surname:"Bengtsson",nickname:"Lolkana",team:1,kills:0,deaths:0},{firstname:"Elliot",surname:"Gustafsson",nickname:"ottyhard",team:1,kills:0,deaths:0},{firstname:"Edvin",surname:"Ström",nickname:"Amp3d",team:1,kills:0,deaths:0},{firstname:"Gunnar",surname:"Henson",nickname:"atlas",team:1,kills:0,deaths:0},{firstname:"Pontus",surname:"Johansson",nickname:"shzss",team:1,kills:0,deaths:0}],p=i.map((t,s)=>(++s,`<tr><td class="border p-4 text-left">${s}. ${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td></tr>`)),u=`
+`,m=[{firstname:"Patrik",surname:"Björn",nickname:"BJOERN",team:1,kills:0,deaths:0},{firstname:"Lukas",surname:"Karlsson",nickname:"Krak3N",team:1,kills:0,deaths:0},{firstname:"Emil",surname:"Carlsson",nickname:"wRoNg",team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Österberg",nickname:"Units",team:1,kills:0,deaths:0},{firstname:"Carl",surname:"Pagels",nickname:"Cuuurl",team:1,kills:0,deaths:0},{firstname:"Ludvig",surname:"Bengtsson",nickname:"Lolkana",team:1,kills:0,deaths:0},{firstname:"Elliot",surname:"Gustafsson",nickname:"ottyhard",team:1,kills:0,deaths:0},{firstname:"Edvin",surname:"Ström",nickname:"Amp3d",team:1,kills:0,deaths:0},{firstname:"Gunnar",surname:"Henson",nickname:"atlas",team:1,kills:0,deaths:0},{firstname:"Pontus",surname:"Johansson",nickname:"shzss",team:1,kills:0,deaths:0},{firstname:"Petter",surname:"Wagander",nickname:"Biggie cheese",team:1,kills:0,deaths:0}],b=m.map((t,a)=>(++a,`<tr><td class="border p-4 text-left">${a}. ${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td></tr>`)),x=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Deltagare</h1>
   
   <table class="w-full border-collapse border">
     <tbody>
-        ${p.join("")}
+        ${b.join("")}
     </tbody>
   </table>
-`,f=`
+`,w=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Lag</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort lagen är lottade.</h2>
-`,d=[{team:1,name:"N/A",games:0,wins:0,losses:0}],b=t=>t===void 0?"":d.map(s=>{if(s.team===t)return s.name}).join(""),x=i.map((t,s)=>{let l=t.kills/t.deaths||0,a="";s===0?a="bg-yellow-200":s===1?a="bg-gray-200":s===2&&(a="bg-amber-100");let e=d.find(r=>r.team===t.team);return`
+`,p=[{team:1,name:"N/A",games:0,wins:0,losses:0,mapWins:0,mapLosses:0}],k=t=>t===void 0?"":p.map(a=>{if(a.team===t)return a.name}).join("");function v(t,a){const e={};return e[t]={id:t,played:0,mapPlayed:0,won:0,mapWon:0,lost:0,mapLost:0,points:0,scored:0,conceded:0},a.filter(s=>s.group===t).length===0||a.forEach(({team1:s,team2:l,games:o})=>{e[t].played++,o.forEach(({score1:i,score2:d})=>{let n=0;e[t].mapPlayed++,s===t?(e[t].scored+=i,e[t].conceded+=d,i>d?(e[t].mapWon++,n++):(e[t].mapLost++,n--)):l===t&&(e[t].scored+=d,e[t].conceded+=i,d>i?(e[t].mapWon++,n++):(e[t].mapLost++,n--)),n>0,e[t].won++,e[t].points+=3,e[t].lost++})}),e[t]}const y=[],L=m.map((t,a)=>{let e=t.kills/t.deaths||0,r="";a===0?r="bg-yellow-200":a===1?r="bg-gray-200":a===2&&(r="bg-amber-100");let s=p.find(o=>o.team===t.team);if(!s)return"";let l=v(s.team,y);return`
         <tr>
-            <td class="border p-4 text-left ${a}">${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td>
-            <td class="border p-4 text-left ${a}">${b(e?.team)}</td>
-            <td class="border p-4 text-right ${a}">${e?.games}</td>
-            <td class="border p-4 text-right ${a}">${e?.wins}</td>
-            <td class="border p-4 text-right ${a}">${e?.losses}</td>
-            <td class="border p-4 text-right ${a}">${t.kills}</td>
-            <td class="border p-4 text-right ${a}">${t.deaths}</td>
-            <td class="border p-4 text-right ${a}">${l.toFixed(2)}</td>
+            <td class="border p-4 text-left ${r}">${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td>
+            <td class="border p-4 text-left ${r}">${k(s?.team)}</td>
+            <td class="border p-4 text-right ${r}">${l.played}</td>
+            <td class="border p-4 text-right ${r}">${l.won}</td>
+            <td class="border p-4 text-right ${r}">${l.lost}</td>
+            <td class="border p-4 text-right ${r}">${t.kills}</td>
+            <td class="border p-4 text-right ${r}">${t.deaths}</td>
+            <td class="border p-4 text-right ${r}">${e.toFixed(2)}</td>
         </tr>
-    `}),k=`
+    `}),$=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Statistik</h1>
   
   <table class="w-full border-collapse border">
@@ -125,10 +125,10 @@
         </tr>
     </thead>
     <tbody>
-        ${x.join("")}
+        ${L.join("")}
     </tbody>
   </table>
-`,w=`
+`,S=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Regler</h1>
   
   <p class="mb-8">Alla matcher spelas i bäst av 3 (BO3). Beroende på hur många lag som anmäler sig blir det slutspel alternativt möter de 2 bästa lagen poängmässigt varandra i en final.</p>
@@ -158,7 +158,7 @@
   <h2 class="text-2xl/7 font-bold sm:truncate sm:text-2xl sm:tracking-tight pb-3">Frågor?</h2>
   
   <p>Information kommer primärt hållas i <a href="https://discord.gg/edCNCUKhGt" target="_blank">fortnox-gameon discord</a>, så se till att alla lagmedlemmar sitter där.</p>
-`,v=[{path:"/",data:m},{path:"/groups",data:g},{path:"/playoffs",data:h},{path:"/participants",data:u},{path:"/teams",data:f},{path:"/stats",data:k},{path:"/rules",data:w}],n=()=>{const t=document.getElementById("root");if(!t)return;const s=v.find(a=>a.path==window.location.pathname||"/fortnox-inhouse-tournament"+a.path==window.location.pathname);if(!s)return;const l=s.data;t.style.opacity="0.0",setTimeout(()=>{t.innerHTML=l,t.style.opacity="1.0"},50)},c=()=>{document.querySelectorAll("nav a").forEach(t=>{t.href===window.location.href?(t.classList.add("bg-emerald-950"),t.classList.remove("bg-transparent")):(t.classList.remove("bg-emerald-950"),t.classList.add("bg-transparent"))})},y=t=>{if(!t)return;t.preventDefault();const s=t.target;s&&(history.pushState({},"newUrl",s.href),n(),c())},L=()=>{window.addEventListener("popstate",n),window.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("nav a").forEach(t=>{t.addEventListener("click",y)}),n(),c()})};L();const $=`
+`,B=[{path:"/",data:h},{path:"/groups",data:f},{path:"/playoffs",data:u},{path:"/participants",data:x},{path:"/teams",data:w},{path:"/stats",data:$},{path:"/rules",data:S}],c=()=>{const t=document.getElementById("root");if(!t)return;const a=B.find(r=>r.path==window.location.pathname||"/fortnox-inhouse-tournament"+r.path==window.location.pathname);if(!a)return;const e=a.data;t.style.opacity="0.0",setTimeout(()=>{t.innerHTML=e,t.style.opacity="1.0"},50)},g=()=>{document.querySelectorAll("nav a").forEach(t=>{t.href===window.location.href?(t.classList.add("bg-emerald-950"),t.classList.remove("bg-transparent")):(t.classList.remove("bg-emerald-950"),t.classList.add("bg-transparent"))})},P=t=>{if(!t)return;t.preventDefault();const a=t.target;a&&(history.pushState({},"newUrl",a.href),c(),g())},E=()=>{window.addEventListener("popstate",c),window.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("nav a").forEach(t=>{t.addEventListener("click",P)}),c(),g()})};E();const C=`
     <div class="md:flex flex-col md:flex-row md:min-h-screen sticky top-0 h-screen">
       <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-white bg-emerald-900 flex-shrink-0" x-data="{ open: false }">
         <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
@@ -182,6 +182,6 @@
       </div>
     </div>
 `;document.querySelector("#app").innerHTML=`
-    ${$}
+    ${C}
     <div id="root" class="flex-1 w-full p-8"></div>
 `;
