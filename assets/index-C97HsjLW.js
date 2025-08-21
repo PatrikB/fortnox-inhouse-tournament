@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))r(s);new MutationObserver(s=>{for(const l of s)if(l.type==="childList")for(const n of l.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&r(n)}).observe(document,{childList:!0,subtree:!0});function e(s){const l={};return s.integrity&&(l.integrity=s.integrity),s.referrerPolicy&&(l.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?l.credentials="include":s.crossOrigin==="anonymous"?l.credentials="omit":l.credentials="same-origin",l}function r(s){if(s.ep)return;s.ep=!0;const l=e(s);fetch(s.href,l)}})();const p=`
+(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))r(a);new MutationObserver(a=>{for(const l of a)if(l.type==="childList")for(const n of l.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&r(n)}).observe(document,{childList:!0,subtree:!0});function s(a){const l={};return a.integrity&&(l.integrity=a.integrity),a.referrerPolicy&&(l.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?l.credentials="include":a.crossOrigin==="anonymous"?l.credentials="omit":l.credentials="same-origin",l}function r(a){if(a.ep)return;a.ep=!0;const l=s(a);fetch(a.href,l)}})();const h=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Hem</h1>
   
   <section class="mb-8">
@@ -77,15 +77,15 @@
       </table>
     </div>
   </div>
-`,u=`
+`,g=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Gruppspel</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort lagen är klara.</h2>
-`,f=`
+`,u=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Slutspel</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort gruppspelet är klart.</h2>
-`,m=[{firstname:"Patrik",surname:"Björn",nickname:"BJOERN",team:1,kills:0,deaths:0},{firstname:"Lukas",surname:"Karlsson",nickname:"Krak3N",team:1,kills:0,deaths:0},{firstname:"Emil",surname:"Carlsson",nickname:"wRoNg",team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Österberg",nickname:"Units",team:1,kills:0,deaths:0},{firstname:"Carl",surname:"Pagels",nickname:"Cuuurl",team:1,kills:0,deaths:0},{firstname:"Ludvig",surname:"Bengtsson",nickname:"Lolkana",team:1,kills:0,deaths:0},{firstname:"Elliot",surname:"Gustafsson",nickname:"ottyhard",team:1,kills:0,deaths:0},{firstname:"Edvin",surname:"Ström",nickname:"Amp3d",team:1,kills:0,deaths:0},{firstname:"Gunnar",surname:"Henson",nickname:"atlas",team:1,kills:0,deaths:0},{firstname:"Pontus",surname:"Johansson",nickname:"shzss",team:1,kills:0,deaths:0},{firstname:"Petter",surname:"Wagander",nickname:"Biggie cheese",team:1,kills:0,deaths:0},{firstname:"Tommy",surname:"Karlsson",nickname:"trivial_tom",team:1,kills:0,deaths:0},{firstname:"Jon",surname:"Jennemann",nickname:"kr4nk",team:1,kills:0,deaths:0},{firstname:"Rasmus",surname:"Lager",nickname:"Mousn",team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Lodén",nickname:"Daimon",team:1,kills:0,deaths:0},{firstname:"Rickard",surname:"Lundby",nickname:"Phase",team:1,kills:0,deaths:0},{firstname:"Håkan",surname:"Fröderberg",nickname:"Warken",team:1,kills:0,deaths:0},{firstname:"Eric",surname:"Wahlgren",nickname:"Rasande Roland",team:1,kills:0,deaths:0},{firstname:"Eskil",surname:"Skarin",nickname:"skarre",team:1,kills:0,deaths:0},{firstname:"Björn",surname:"Persson",nickname:"Solitudo",team:1,kills:0,deaths:0}],b=m.map((t,a)=>(++a,`<tr><td class="border p-4 text-left">${a}. ${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td></tr>`)),x=`
+`,m=[{firstname:"Patrik",surname:"Björn",nickname:"BJOERN",captain:!0,team:1,kills:0,deaths:0},{firstname:"Lukas",surname:"Karlsson",nickname:"Krak3N",captain:!0,team:1,kills:0,deaths:0},{firstname:"Emil",surname:"Carlsson",nickname:"wRoNg",captain:!1,team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Österberg",nickname:"Units",captain:!0,team:1,kills:0,deaths:0},{firstname:"Carl",surname:"Pagels",nickname:"Cuuurl",captain:!0,team:1,kills:0,deaths:0},{firstname:"Ludvig",surname:"Bengtsson",nickname:"Lolkana",captain:!1,team:1,kills:0,deaths:0},{firstname:"Elliot",surname:"Gustafsson",nickname:"ottyhard",captain:!1,team:1,kills:0,deaths:0},{firstname:"Edvin",surname:"Ström",nickname:"Amp3d",captain:!1,team:1,kills:0,deaths:0},{firstname:"Gunnar",surname:"Henson",nickname:"atlas",captain:!1,team:1,kills:0,deaths:0},{firstname:"Pontus",surname:"Johansson",nickname:"shzss",captain:!1,team:1,kills:0,deaths:0},{firstname:"Petter",surname:"Wagander",nickname:"Biggie cheese",captain:!1,team:1,kills:0,deaths:0},{firstname:"Tommy",surname:"Karlsson",nickname:"trivial_tom",captain:!1,team:1,kills:0,deaths:0},{firstname:"Jon",surname:"Jennemann",nickname:"kr4nk",captain:!1,team:1,kills:0,deaths:0},{firstname:"Rasmus",surname:"Lager",nickname:"Mousn",captain:!1,team:1,kills:0,deaths:0},{firstname:"Joakim",surname:"Lodén",nickname:"Daimon",captain:!1,team:1,kills:0,deaths:0},{firstname:"Rickard",surname:"Lundby",nickname:"Phase",captain:!1,team:1,kills:0,deaths:0},{firstname:"Håkan",surname:"Fröderberg",nickname:"Warken",captain:!1,team:1,kills:0,deaths:0},{firstname:"Eric",surname:"Wahlgren",nickname:"Rasande Roland",captain:!1,team:1,kills:0,deaths:0},{firstname:"Eskil",surname:"Skarin",nickname:"skarre",captain:!1,team:1,kills:0,deaths:0},{firstname:"Björn",surname:"Persson",nickname:"Solitudo",captain:!1,team:1,kills:0,deaths:0},{firstname:"Gustav",surname:"Larsson",nickname:"Are those Reebok or Nike?",captain:!1,team:1,kills:0,deaths:0}],b=m.map((t,e)=>(++e,`<tr><td class="border p-4 text-left">${e}. ${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td></tr>`)),x=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Deltagare</h1>
   
   <table class="w-full border-collapse border">
@@ -97,16 +97,16 @@
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Lag</h1>
   
   <h2 class="font-bold sm:truncate sm:tracking-tight pb-3">Uppdateras så fort lagen är lottade.</h2>
-`,g=[{team:1,name:"N/A"}],w=t=>t===void 0?"":g.map(a=>{if(a.team===t)return a.name}).join("");function v(t,a){const e={};return e[t]={id:t,played:0,mapPlayed:0,won:0,mapWon:0,lost:0,mapLost:0,points:0,scored:0,conceded:0},a.filter(s=>s.group===t).length===0||a.forEach(({team1:s,team2:l,games:n})=>{e[t].played++,n.forEach(({score1:i,score2:d})=>{let o=0;e[t].mapPlayed++,s===t?(e[t].scored+=i,e[t].conceded+=d,i>d?(e[t].mapWon++,o++):(e[t].mapLost++,o--)):l===t&&(e[t].scored+=d,e[t].conceded+=i,d>i?(e[t].mapWon++,o++):(e[t].mapLost++,o--)),o>0,e[t].won++,e[t].points+=3,e[t].lost++})}),e[t]}const y=[],L=m.map((t,a)=>{let e=t.kills/t.deaths||0,r="";a===0?r="bg-yellow-200":a===1?r="bg-gray-200":a===2&&(r="bg-amber-100");let s=g.find(n=>n.team===t.team);if(!s)return"";let l=v(s.team,y);return`
+`,p=[{team:1,name:"N/A",members:[]}];p.forEach(t=>{m.forEach(e=>{e.team===t.team&&t.members.push(e)})});const w=t=>t===void 0?"":p.map(e=>{if(e.team===t)return e.name}).join("");function v(t,e){const s={};return s[t]={id:t,played:0,mapPlayed:0,won:0,mapWon:0,lost:0,mapLost:0,points:0,scored:0,conceded:0},e.filter(a=>a.group===t).length===0||e.forEach(({team1:a,team2:l,games:n})=>{s[t].played++,n.forEach(({score1:i,score2:d})=>{let o=0;s[t].mapPlayed++,a===t?(s[t].scored+=i,s[t].conceded+=d,i>d?(s[t].mapWon++,o++):(s[t].mapLost++,o--)):l===t&&(s[t].scored+=d,s[t].conceded+=i,d>i?(s[t].mapWon++,o++):(s[t].mapLost++,o--)),o>0,s[t].won++,s[t].points+=3,s[t].lost++})}),s[t]}const y=[],L=m.map((t,e)=>{let s=t.kills/t.deaths||0,r="";e===0?r="bg-yellow-200":e===1?r="bg-gray-200":e===2&&(r="bg-amber-100");let a=p.find(n=>n.team===t.team);if(!a)return"";let l=v(a.team,y);return`
         <tr>
             <td class="border p-4 text-left ${r}">${t.firstname} <strong>${t.nickname}</strong> ${t.surname}</td>
-            <td class="border p-4 text-left ${r}">${w(s?.team)}</td>
+            <td class="border p-4 text-left ${r}">${w(a?.team)}</td>
             <td class="border p-4 text-right ${r}">${l.played}</td>
             <td class="border p-4 text-right ${r}">${l.won}</td>
             <td class="border p-4 text-right ${r}">${l.lost}</td>
             <td class="border p-4 text-right ${r}">${t.kills}</td>
             <td class="border p-4 text-right ${r}">${t.deaths}</td>
-            <td class="border p-4 text-right ${r}">${e.toFixed(2)}</td>
+            <td class="border p-4 text-right ${r}">${s.toFixed(2)}</td>
         </tr>
     `}),$=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Statistik</h1>
@@ -153,12 +153,12 @@
   
   <h2 class="text-2xl/7 font-bold sm:truncate sm:text-2xl sm:tracking-tight pb-3">Schema</h2>
   
-  <p class="mb-8">Inget satt schema, utan lagen bestämmer själva när de vill spela. Alla gruppspelsmatcher behöver dock vara klara till <strong>TBD</strong>, alltså en match per vecka i snitt.</p>
+  <p class="mb-8">Inget satt schema, utan lagen bestämmer själva när de vill spela. Alla gruppspelsmatcher behöver dock vara klara till <strong>21/9</strong>, alltså en match per vecka i snitt.</p>
   
   <h2 class="text-2xl/7 font-bold sm:truncate sm:text-2xl sm:tracking-tight pb-3">Frågor?</h2>
   
   <p>Information kommer primärt hållas i <a href="https://discord.gg/edCNCUKhGt" target="_blank">fortnox-gameon discord</a>, så se till att alla lagmedlemmar sitter där.</p>
-`,B=[{path:"/",data:p},{path:"/groups",data:u},{path:"/playoffs",data:f},{path:"/participants",data:x},{path:"/teams",data:k},{path:"/stats",data:$},{path:"/rules",data:S}],c=()=>{const t=document.getElementById("root");if(!t)return;const a=B.find(r=>r.path==window.location.pathname||"/fortnox-inhouse-tournament"+r.path==window.location.pathname);if(!a)return;const e=a.data;t.style.opacity="0.0",setTimeout(()=>{t.innerHTML=e,t.style.opacity="1.0"},50)},h=()=>{document.querySelectorAll("nav a").forEach(t=>{t.href===window.location.href?(t.classList.add("bg-emerald-950"),t.classList.remove("bg-transparent")):(t.classList.remove("bg-emerald-950"),t.classList.add("bg-transparent"))})},P=t=>{if(!t)return;t.preventDefault();const a=t.target;a&&(history.pushState({},"newUrl",a.href),c(),h())},E=()=>{window.addEventListener("popstate",c),window.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("nav a").forEach(t=>{t.addEventListener("click",P)}),c(),h()})};E();const R=`
+`,E=[{path:"/",data:h},{path:"/groups",data:g},{path:"/playoffs",data:u},{path:"/participants",data:x},{path:"/teams",data:k},{path:"/stats",data:$},{path:"/rules",data:S}],c=()=>{const t=document.getElementById("root");if(!t)return;const e=E.find(r=>r.path==window.location.pathname||"/fortnox-inhouse-tournament"+r.path==window.location.pathname);if(!e)return;const s=e.data;t.style.opacity="0.0",setTimeout(()=>{t.innerHTML=s,t.style.opacity="1.0"},50)},f=()=>{document.querySelectorAll("nav a").forEach(t=>{t.href===window.location.href?(t.classList.add("bg-emerald-950"),t.classList.remove("bg-transparent")):(t.classList.remove("bg-emerald-950"),t.classList.add("bg-transparent"))})},B=t=>{if(!t)return;t.preventDefault();const e=t.target;e&&(history.pushState({},"newUrl",e.href),c(),f())},P=()=>{window.addEventListener("popstate",c),window.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("nav a").forEach(t=>{t.addEventListener("click",B)}),c(),f()})};P();const R=`
     <div class="md:flex flex-col md:flex-row md:min-h-screen sticky top-0 h-screen">
       <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-white bg-emerald-900 flex-shrink-0" x-data="{ open: false }">
         <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
