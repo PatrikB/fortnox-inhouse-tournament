@@ -226,27 +226,27 @@
   </div>
 `;function fe(t,a){const s={};return s[t]={id:t,played:0,mapPlayed:0,won:0,mapWon:0,lost:0,mapLost:0,points:0,scored:0,conceded:0},a.forEach(({team1:i,team2:e,games:m})=>{let n=0;m.forEach(({score1:_,score2:l})=>{_===null||l===null||(i===t?(s[t].scored+=_,s[t].conceded+=l,_>l?(s[t].mapWon++,n++):(s[t].mapLost++,n--),s[t].mapPlayed++):e===t&&(s[t].scored+=l,s[t].conceded+=_,l>_?(s[t].mapWon++,n++):(s[t].mapLost++,n--),s[t].mapPlayed++))}),n!==0&&(n>0?(s[t].won++,s[t].points+=3):s[t].lost++,s[t].played++)}),s[t]}const ge=g.slice().sort((t,a)=>{const s=t.kills/(t.deaths||1);return a.kills/(a.deaths||1)-s}).map((t,a)=>{let s=t.kills/t.deaths||0,i="";a===0?i="bg-yellow-200":a===1?i="bg-gray-200":a===2&&(i="bg-amber-100");let e=$.find(d=>d.team===t.team);if(!e)return"";let m=fe(e.team,x);console.log(m);let n=t.damage/(m.scored+m.conceded),_=t.kills/m.mapPlayed,l=t.assists/m.mapPlayed,c=t.deaths/m.mapPlayed;return`
         <tr class="odd:bg-white even:bg-gray-50 hover:bg-gray-200">
-            <td class="border p-4 text-left ${i}">${t.firstname} <strong>${t.nickname}</strong> ${t.surname}<span class="block font-light text-sm italic">${u(e.team)}</span></td>
-            <td class="border p-4 text-right ${i}">${t.kills}</td>
-            <td class="border p-4 text-right ${i}">${t.deaths}</td>
-            <td class="border p-4 text-right ${i}">${s.toFixed(2).replace(/[.,]00$/,"")}</td>
-            <td class="border p-4 text-right ${i}">${t.damage}</td>
-            <td class="border p-4 text-right ${i}">${n.toFixed(0)}</td>
-            <td class="border p-4 text-right ${i}">${_.toFixed(0)} / ${l.toFixed(0)} / ${c.toFixed(0)}</td>
+            <td class="border-b border-x p-4 text-left ${i}">${t.firstname} <strong>${t.nickname}</strong> ${t.surname}<span class="block font-light text-sm italic">${u(e.team)}</span></td>
+            <td class="border-b border-x p-4 text-right ${i}">${t.kills}</td>
+            <td class="border-b border-x p-4 text-right ${i}">${t.deaths}</td>
+            <td class="border-b border-x p-4 text-right ${i}">${s.toFixed(2).replace(/[.,]00$/,"")}</td>
+            <td class="border-b border-x p-4 text-right hidden md:table-cell ${i}">${t.damage}</td>
+            <td class="border-b border-x p-4 text-right hidden md:table-cell ${i}">${n.toFixed(0)}</td>
+            <td class="border-b border-x p-4 text-right hidden md:table-cell ${i}">${_.toFixed(0)} / ${l.toFixed(0)} / ${c.toFixed(0)}</td>
         </tr>
     `}),we=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Statistik</h1>
   
-  <table class="w-full border-collapse border table-auto">
-    <thead class="sticky top-0 bg-green-50">
+  <table class="w-full table-auto">
+    <thead class="md:sticky md:top-0 border-b md:border-0 bg-green-50 ring-1">
         <tr>
-            <th class="p-4 text-left border-b">Spelare</th>
-            <th class="p-4 text-right border-b">Kills</th>
-            <th class="p-4 text-right border-b">Deaths</th>
-            <th class="p-4 text-right border-b">K/D</th>
-            <th class="p-4 text-right border-b">Damage</th>
-            <th class="p-4 text-right border-b">ADR</th>
-            <th class="p-4 text-right border-b">AVG</th>
+            <th class="p-4 text-left">Spelare</th>
+            <th class="p-4 text-right">Kills</th>
+            <th class="p-4 text-right">Deaths</th>
+            <th class="p-4 text-right">K/D</th>
+            <th class="p-4 text-right hidden md:table-cell">Damage</th>
+            <th class="p-4 text-right hidden md:table-cell">ADR</th>
+            <th class="p-4 text-right hidden md:table-cell">AVG</th>
         </tr>
     </thead>
     <tbody>
