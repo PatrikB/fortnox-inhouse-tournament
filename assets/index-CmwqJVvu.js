@@ -203,8 +203,8 @@
 `,Ie='<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"></path><path d="M5 21h14"></path></svg>',Te=`
   <h1 class="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-8">Slutspel</h1>
   
-  <div class="grid grid-flow-col grid-cols-2 items-center">
-    <div class="grid grid-flow-row grid-rows-1 mr-8">
+  <div class="md:grid md:grid-flow-col md:grid-cols-2 items-center">
+    <div class="md:grid md:grid-flow-row md:grid-rows-1 md:mr-8">
       <div class="rounded-lg p-4 md:p-12 text-xs md:text-base z-10 bg-white shadow">
         <div class="grid grid-flow-col grid-cols-2">
           <h2 class="font-bold md:text-2xl sm:tracking-tight">team_BJOERN</h2>
@@ -236,11 +236,11 @@
       </div>
     </div>
     
-    <div class="grid grid-flow-row grid-rows-1 rounded-lg shadow">
-      <div class="rounded-lg p-4 md:p-12 text-xs md:text-base bg-amber-400 z-1">
+    <div class="md:grid md:grid-flow-row md:grid-rows-1 mt-8 md:mt-0 rounded-lg shadow">
+      <div class="rounded-lg p-12 text-xs md:text-base bg-amber-400 z-1">
         <div class="grid grid-flow-col winner">
           ${Ie}
-          <h2 class="font-bold md:text-3xl sm:tracking-tight">TBD</h2>
+          <h2 class="font-bold text-3xl sm:tracking-tight z-50">TBD</h2>
         </div>
       </div>
   </div>
